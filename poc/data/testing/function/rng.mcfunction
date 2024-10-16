@@ -6,9 +6,9 @@
 execute if score #rng random matches 0 store result score #rng random run data get entity @r UUID[0]
 
 # Compute recurrence relation
-scoreboard players operation #rng random *= #rng_a random
-scoreboard players operation #rng random += #rnc_c random
-execute if score #rng random matches ..-1 run scoreboard players operation #rng random += #rng_m random
+scoreboard players operation #rng random *= #rng_a value
+scoreboard players operation #rng random += #rnc_c value
+execute if score #rng random matches ..-1 run scoreboard players operation #rng random += #rng_m value
 
 # Return for convenience
 return run scoreboard players get #rng random
