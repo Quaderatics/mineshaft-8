@@ -1,1 +1,1 @@
-say commit_level
+effect give @s minecraft:glowing 1

@@ -1,1 +1,1 @@
-say place_connector
+effect give @s minecraft:glowing 1
