@@ -1,5 +1,8 @@
-# Executes as/at player every tick while game is running
+# Executes as/at each armor stand in the active game session every tick
 
-execute as @e[tag=level_placer] at @s positioned ~ ~-4 ~ if entity @p[distance=..10] run function mineshaft8:place_level
-execute as @e[tag=level_committer] at @s positioned ^8 ^4 ^12 if entity @p[distance=..3] run function mineshaft8:commit_level
-execute as @e[tag=connector_placer] at @s if predicate {condition:"location_check",predicate:{position:{y:-2.0}}} positioned ^1 ^-1 ^ run function mineshaft8:place_connector
+execute if entity @s[tag=minecart_mount] run ride @e[type=minecraft:minecart,distance=..4,limit=1] mount @s
+execute if entity @s[tag=furnace_minecart_mount] run ride @e[type=minecraft:furnace_minecart,distance=..4,limit=1] mount @s
+
+execute if entity @s[tag=level_placer] positioned ~ ~-4 ~ if entity @p[distance=..10] at @s positioned ^9 ^-8.5 ^8 run function mineshaft8:place_level
+execute if entity @s[tag=level_committer] positioned ^8 ^4 ^12 if entity @p[distance=..3] at @s run function mineshaft8:commit_level
+execute if entity @s[tag=connector_placer] positioned ^1 ^-1 ^ run function mineshaft8:place_connector
