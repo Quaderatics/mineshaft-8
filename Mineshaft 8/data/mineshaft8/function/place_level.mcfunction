@@ -1,6 +1,8 @@
 # Executes as the `level_placer` armor stand at the anchor point of the next
 # level
 
+say Placing next level
+
 function mineshaft8:select_level
 
 execute if entity @s[y_rotation=-90..90] run data modify storage mineshaft8:data place_args.rotation set value "none"
