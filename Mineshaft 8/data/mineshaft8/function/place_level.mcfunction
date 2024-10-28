@@ -1,5 +1,5 @@
 # Executes as the `level_placer` armor stand at the anchor point of the next
-# level
+# level when the player is in range
 
 say Placing next level
 
