@@ -6,6 +6,3 @@ execute unless entity @s[tag=needs_number] run return fail
 
 scoreboard players operation @s level = #set_level level
 tag @s remove needs_number
-
-say Set level to:
-tellraw @a {"type":"score","score":{"name":"@s","objective":"level"}}
