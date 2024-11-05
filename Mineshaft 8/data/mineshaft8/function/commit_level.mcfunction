@@ -2,6 +2,7 @@
 
 say Committing level
 
-scoreboard players operation @p level = @s level
+scoreboard players operation @a level = @s level
+execute as @a at @s run function mineshaft8:reset_player
 
 tag @s add connector_placer

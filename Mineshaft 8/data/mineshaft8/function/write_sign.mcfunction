@@ -4,3 +4,4 @@
 
 function mineshaft8:set_level
 data modify entity @s text set value '{"type":"score","score":{"name":"@s","objective":"level"},"color":"white"}'
+scoreboard players reset @s level
