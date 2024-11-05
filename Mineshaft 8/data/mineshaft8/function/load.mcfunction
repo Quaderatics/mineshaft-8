@@ -1,6 +1,7 @@
 scoreboard objectives add random dummy
 scoreboard objectives add value dummy
 scoreboard objectives add level dummy
+scoreboard objectives add zzdebug_next_level dummy
 
 execute unless score #rng random matches 0.. run scoreboard players set #rng random 0
 scoreboard players set #rng_m value 2147483647
