@@ -13,6 +13,9 @@ execute as @e[tag=rear_level_sign] at @s if function mineshaft8:needs_number run
 
 execute as @a at @s run function mineshaft8:reset_player
 scoreboard players set @a level 8
-effect give @a minecraft:blindness 1 0 true
+effect give @a minecraft:blindness 4 0 true
 tp @a ~7.5 ~7 ~17 0 0
+summon minecraft:text_display ~7.5 ~8.5 ~19 {text:'"Mineshaft 8"',Rotation:[-180f,0f],Tags:["title_text"]}
+summon minecraft:text_display ~7.5 ~8.25 ~19 {text: '"By Quaderatics"',Rotation:[-180f,0f],Tags:["title_text"],transformation:{left_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],right_rotation:[0f,0f,0f,1f],scale:[0.5f,0.5f,0.5f]}}
 execute as @a unless entity @s[tag=debug] run tag @s add game_active
+execute as @e[type=minecraft:armor_stand] at @s if predicate mineshaft8:is_in_active_game run tag @s add new_game

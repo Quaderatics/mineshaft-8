@@ -2,7 +2,10 @@
 # Randomly chooses the next level and sets `place_args.structure_name` to its
 # resource location
 
+execute if entity @s[tag=new_game] run say This is a new game
+
 execute store result score #next_is_anomalous value if predicate mineshaft8:anomaly_chance
+execute if entity @s[tag=new_game] run scoreboard players set #next_is_anomalous value 0
 execute if score @p zzdebug_next_level matches -1 run scoreboard players set #next_is_anomalous value 0
 execute if score @p zzdebug_next_level matches 0.. run scoreboard players set #next_is_anomalous value 1
 
