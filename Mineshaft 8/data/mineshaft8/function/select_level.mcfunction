@@ -4,6 +4,7 @@
 
 execute store result score #next_is_anomalous value if predicate mineshaft8:anomaly_chance
 execute if score @p zzdebug_next_level matches -1 run scoreboard players set #next_is_anomalous value 0
+execute if score @p zzdebug_next_level matches 0.. run scoreboard players set #next_is_anomalous value 1
 
 # Normal level
 execute if score #next_is_anomalous value matches 0 run say Selected normal level
