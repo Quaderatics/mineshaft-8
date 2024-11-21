@@ -5,6 +5,8 @@ say Placing connector
 
 function mineshaft8:clear_section_entities
 
+execute unless entity @s[tag=resets_progress] if score @s level matches 1 run return run function mineshaft8:place_exit
+
 execute if entity @s[y_rotation=-90..90] run place template mineshaft8:connector ~ ~ ~ none
 execute unless entity @s[y_rotation=-90..90] run place template mineshaft8:connector ~ ~ ~ 180
 

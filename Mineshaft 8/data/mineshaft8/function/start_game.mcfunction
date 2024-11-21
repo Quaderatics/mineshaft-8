@@ -19,3 +19,6 @@ summon minecraft:text_display ~7.5 ~8.5 ~19 {text:'"Mineshaft 8"',Rotation:[-180
 summon minecraft:text_display ~7.5 ~8.25 ~19 {text: '"By Quaderatics"',Rotation:[-180f,0f],Tags:["title_text","unseen_text"],transformation:{left_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],right_rotation:[0f,0f,0f,1f],scale:[0.5f,0.5f,0.5f]}}
 execute as @a unless entity @s[tag=debug] run tag @s add game_active
 execute as @e[type=minecraft:armor_stand] at @s if predicate mineshaft8:is_in_active_game run tag @s add new_game
+
+execute as @e[tag=game_over_placer] at @s positioned ~ -3 ~ run function mineshaft8:clear_section_entities
+execute as @e[tag=game_over_placer] at @s positioned ~ -3 ~ run place template mineshaft8:game_over_scene ~ ~ ~ none
