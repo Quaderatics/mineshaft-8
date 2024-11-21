@@ -1,0 +1,22 @@
+{
+  "block.stone.break": {
+    "replace": true,
+    "sounds": []
+  },
+  "block.tuff.break": {
+    "replace": true,
+    "sounds": []
+  },
+  "block.wood.break": {
+    "replace": true,
+    "sounds": []
+  },
+  "entity.glow_item_frame.add_item": {
+    "replace": true,
+    "sounds": []
+  },
+  "entity.glow_item_frame.break": {
+    "replace": true,
+    "sounds": []
+  }
+}
