@@ -10,4 +10,5 @@ scoreboard players set #rng_c value 0
 
 function mineshaft8:load_levels
 
+execute unless score #num_anomalies_found value matches 0.. run scoreboard players set #num_anomalies_found value 0
 execute unless score #num_escapes value matches 0.. run scoreboard players set #num_escapes value 0
