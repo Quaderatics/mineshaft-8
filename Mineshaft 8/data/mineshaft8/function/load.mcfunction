@@ -9,3 +9,5 @@ scoreboard players set #rng_a value 48271
 scoreboard players set #rng_c value 0
 
 function mineshaft8:load_levels
+
+execute unless score #num_escapes value matches 0.. run scoreboard players set #num_escapes value 0
