@@ -3,6 +3,8 @@
 
 say Starting run
 
+function mineshaft8:reset_available_anomalies
+
 execute as @e[predicate=mineshaft8:is_in_active_game] at @s run function mineshaft8:remove_entity
 
 execute positioned ~ -3 ~ run place template mineshaft8:connector ~ ~ ~ none
