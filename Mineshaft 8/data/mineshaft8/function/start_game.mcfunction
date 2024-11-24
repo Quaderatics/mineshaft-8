@@ -3,6 +3,7 @@
 
 say Starting run
 
+function mineshaft8:seed_rng
 function mineshaft8:reset_available_anomalies
 
 execute as @e[predicate=mineshaft8:is_in_active_game] at @s run function mineshaft8:remove_entity
@@ -24,3 +25,6 @@ execute as @e[type=minecraft:armor_stand] at @s if predicate mineshaft8:is_in_ac
 
 execute as @e[tag=game_over_placer] at @s positioned ~ -3 ~ run function mineshaft8:clear_section_entities
 execute as @e[tag=game_over_placer] at @s positioned ~ -3 ~ run place template mineshaft8:game_over_scene ~ ~ ~ none
+
+# Activate conditional chain command block in-world
+return 0
