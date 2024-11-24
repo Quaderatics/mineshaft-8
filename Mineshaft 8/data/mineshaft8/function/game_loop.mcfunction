@@ -8,4 +8,6 @@ execute if entity @s[tag=level_fixer] run function mineshaft8:fix_level
 execute if entity @s[tag=level_committer] positioned ^8 ^4 ^12 if entity @p[distance=..3] at @s run function mineshaft8:commit_level
 execute if entity @s[tag=connector_placer] positioned ^1 ^-0.5 ^ run function mineshaft8:place_connector
 
+execute if score @s active matches 1 unless entity @a[tag=game_active] run scoreboard players set @s active 0
+
 execute if entity @a[tag=debug] as @e[type=armor_stand] at @s if function mineshaft8:needs_number run say Error: Entity has `needs_number` at end of game loop
