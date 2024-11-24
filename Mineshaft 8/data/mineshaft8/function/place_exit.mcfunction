@@ -1,7 +1,7 @@
 # Executes as the `connector_placer` armor stand at the anchor point of the
 # connector when the connector should lead to the exit
 
-say Placing exit
+execute if entity @a[tag=debug] run say Placing exit
 
 execute if entity @s[y_rotation=-90..90] run place template mineshaft8:exit ~ ~ ~ none
 execute unless entity @s[y_rotation=-90..90] run place template mineshaft8:exit ~ ~ ~ 180

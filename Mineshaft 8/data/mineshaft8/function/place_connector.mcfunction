@@ -1,7 +1,7 @@
 # Executes as the `connector_placer` armor stand at the anchor point of the
 # connector
 
-say Placing connector
+execute if entity @a[tag=debug] run say Placing connector
 
 function mineshaft8:clear_section_entities
 

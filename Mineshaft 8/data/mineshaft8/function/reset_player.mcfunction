@@ -1,6 +1,6 @@
 # Reset the executing player's inventory, effects, etc. between levels
 
-say Resetting
+execute if entity @a[tag=debug] run say Resetting
 
 clear @s
 effect clear @s

@@ -1,6 +1,6 @@
 # Executes as/at the `game_ender` armor stand when the player escapes
 
-say Ending game
+execute if entity @a[tag=debug] run say Ending game
 
 scoreboard players add #num_escapes value 1
 

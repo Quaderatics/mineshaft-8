@@ -1,7 +1,7 @@
 # Executes as/at the `game_starter` armor stand when the player starts a run or
 # dies and needs to respawn
 
-say Starting run
+execute if entity @a[tag=debug] run say Starting run
 
 function mineshaft8:seed_rng
 function mineshaft8:reset_available_anomalies

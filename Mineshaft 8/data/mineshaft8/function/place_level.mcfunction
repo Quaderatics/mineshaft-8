@@ -1,7 +1,7 @@
 # Executes as the `level_placer` armor stand at the anchor point of the next
 # level when the player is in range
 
-say Placing next level
+execute if entity @a[tag=debug] run say Placing next level
 
 function mineshaft8:select_level
 
