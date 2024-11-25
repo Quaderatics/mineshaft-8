@@ -1,4 +1,8 @@
 {
+  "ambient.cave": {
+    "replace": true,
+    "sounds": []
+  },
   "block.stone.break": {
     "replace": true,
     "sounds": []
